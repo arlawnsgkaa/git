@@ -50,16 +50,26 @@ public class App {
             resultList.add(result);/* 배열에서 컬렉션으로 변경됨으로써 변경해야하는 부분 구현 */
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
-            /* 위 요구사항에 맞게 구현 */
+
             answer = sc.next();
             if (answer.equals("remove")) {
                 resultList.remove(0);
             }
-            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
             answer = sc.next();
-            /* exit 을 입력 받으면 반복 종료 */
+            if (answer.equals("inquiry")) {
+                for (int i : resultList) {
+                    System.out.println(i);
+                }
 
-            /* 6.위 요구사항에 맞게 구현 */
+
+            }
+
+            System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");  /* exit 을 입력 받으면 반복 종료 */
+            answer = sc.next();
+
+
+
 
 
 
